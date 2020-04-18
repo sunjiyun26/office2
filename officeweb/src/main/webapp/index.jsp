@@ -2,16 +2,21 @@
 
 <%@ page contentType="text/html; charset=utf8"%>
 <html  >
-<title>Title</title>
+<title>电力之家</title>
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>电力之家</title>
-    <link rel='stylesheet prefetch' href='./css/reset.css'>
-    <link rel="stylesheet" type="text/css" href="./css/default.css">
-    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+<%--    <title>电力之家</title>--%>
+<%--    <link rel='stylesheet prefetch' href='./css/reset.css'>--%>
+<%--    <link rel="stylesheet" type="text/css" href="./css/default.css">--%>
+<%--    <link rel="stylesheet" type="text/css" href="./css/styles.css">--%>
+    <link rel="stylesheet" href="bootstrap-4.1.3-dist/css/bootstrap.css">
+
+
+
+    <script src="bootstrap-4.1.3-dist/bootstrap.js"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 </head>
@@ -27,7 +32,7 @@
     <!-- multistep form -->
     <form id="msform">
         <!-- progressbar -->
-        <ul id="progressbar">
+        <div class="btn-group">
             <li class="active">基本信息</li>
             <li>审核内容及范围</li>
             <li>审核依据</li>
@@ -35,18 +40,58 @@
             <li>初步设计批复主要原则落实情况</li>
             <li>审核结果</li>
             <li>与初设概算对比分析</li>
-        </ul>
+        </div>
         <!-- fieldsets -->
         <fieldset>
-            <h2 class="fs-title">step1:基本信息</h2>
-            <tr>
-                <td><input type="text" name="email" placeholder="Email地址" /></td>
-                <td><input type="password" name="pass" placeholder="密码" /></td>
-            </tr>
+            <div class="container">
 
+                <div class="row" style="padding: 20px 0">
 
-            <input type="password" name="cpass" placeholder="重复密码" />
-            <input type="button" name="next" class="next action-button" value="Next" />
+                    <h3>常用垂直表单布局</h3>
+
+                </div>
+
+                <div class="row form-group">
+
+                    <label class="control-label col-lg-1" for="name">名称</label>
+
+                    <div class="col-lg-5 col-md-6">
+
+                        <input class="form-control" name="name" id="name" type="text">
+
+                    </div>
+
+                </div>
+
+                <div class="row form-group">
+
+                    <label class="control-label col-lg-1">内容</label>
+
+                    <div class="col-lg-5 col-md-6">
+
+                        <textarea class="form-control" rows="5"></textarea>
+
+                    </div>
+
+                </div>
+
+                <div class="row form-group">
+
+                    <label class="control-label col-lg-1">补充</label>
+
+                    <div class="col-lg-5 col-md-6">
+
+                        <textarea class="form-control" rows="5"></textarea>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div>
+                <input type="button" name="previous" class="previous action-button" value="Previous" />
+                <input type="button" name="next" class="next action-button" value="Next" />
+            </div>
         </fieldset>
         <fieldset>
             <h2 class="fs-title">填写社交账号</h2>
